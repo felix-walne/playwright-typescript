@@ -1,0 +1,17 @@
+{
+  "name": "playwright-typescript",
+  "version": "1.0.0",
+  "description": "A demo test automation framework for UI and API testing using Typescript and Playwright.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5"
+  }
+}
