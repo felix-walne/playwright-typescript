@@ -1,6 +1,6 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
-import { GoogleHomePage } from '../pages/GoogleHomePage'; // Import the GoogleHomePage class
+import { GoogleHomePage } from '../../pages/GoogleHomePage'; // Import the GoogleHomePage class
 
 test('google search results', async ({ page }) => {
   const homePage = new GoogleHomePage(page);
