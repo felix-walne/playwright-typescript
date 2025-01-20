@@ -2,7 +2,6 @@ import { Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class GoogleHomePage extends BasePage {
-  public CookieBtn: Locator;
   public acceptCookieBtn: Locator;
   public rejectCookieBtn: Locator;
   public searchInput: Locator; 

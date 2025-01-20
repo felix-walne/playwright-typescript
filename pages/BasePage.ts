@@ -22,7 +22,7 @@ export abstract class BasePage {
   async cookieWithDomainFound(domain: string): Promise<boolean> {
     const cookies = await this.page.context().cookies();
     var cookieCount = cookies.filter(cookie => cookie.domain.includes(domain)).length;
-    console.log(`Google cookie count: ${cookieCount}`);
+    console.debug(`Google cookie count: ${cookieCount}`);
     return cookies.some(cookie => cookie.domain.includes(domain));
   }
 
