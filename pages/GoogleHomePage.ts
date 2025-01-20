@@ -2,25 +2,17 @@ import { Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class GoogleHomePage extends BasePage {
-  private rejectCookieBtn: Locator;
-  private searchInput: Locator; 
-  private searchButton: Locator;
+  public acceptCookieBtn: Locator;
+  public rejectCookieBtn: Locator;
+  public searchInput: Locator; 
 
   constructor(page: Page) {
     super(page); 
+    this.acceptCookieBtn = this.page.locator('//div[text()="Accept all"]');
     this.rejectCookieBtn = this.page.locator('//div[text()="Reject all"]');
     this.searchInput = this.page.locator('textarea[name="q"]'); 
-    this.searchButton = this.page.locator('input[name="btnK"]');
   }
   
-  async enterSearchTerm(searchTerm: string): Promise<void> {
-    await this.enterText(this.searchInput, searchTerm);
-  }
-
-  async rejectCookies(): Promise<void> {
-    await this.clickElement(this.rejectCookieBtn);
-  }
-
   async navigateToHome(): Promise<void> {
     await this.page.goto('./', { waitUntil: 'load' }); 
   }
